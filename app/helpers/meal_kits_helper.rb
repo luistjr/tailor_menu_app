@@ -1,0 +1,2 @@
+module MealKitsHelper
+end
