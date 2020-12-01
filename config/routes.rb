@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :recipes
   resources :meal_kits
   resources :lifestyles
   resources :surveys
