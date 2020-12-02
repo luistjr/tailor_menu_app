@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-    belongs_to :lifestyle
-    has_one :meal_kit, through: :lifestyle
-    has_many :recipes, through: :lifestyle
+    has_many :survey_results
+    has_one :lifestyle, through: :survey_result
 end
