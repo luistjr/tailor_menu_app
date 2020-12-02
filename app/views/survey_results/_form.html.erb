@@ -1,0 +1,13 @@
+<% form_for :survey_result do |f| %>
+  <p>What do you like to do in your free time?</p>
+  <%= f.radio_button :contactmethod, 'email', :checked => true %> 
+  <%= label :contactmethod_email, 'Email' %>
+  <%= f.radio_button :contactmethod, 'sms' %>
+  <%= label :contactmethod_sms, 'SMS' %>
+<% end %>
+
+
+
+
+
+<%# params[:survey_result][] %>

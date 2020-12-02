@@ -1,0 +1,106 @@
+
+
+<%= form_for :survey_result do |f| %>
+  <p>What do you like to do in your free time?</p>
+    <%= f.radio_button :contactmethod, 'email', :checked => true %> 
+    <%= label :contactmethod_email, 'Workout' %>
+    <br>
+    <%= f.radio_button :contactmethod, 'sms' %>
+    <%= label :contactmethod_sms, 'Grab a smoothie, duh' %>
+    <br>
+    <%= f.radio_button :contactmethod, 'sms' %>
+    <%= label :contactmethod_sms, 'Go to the triendiest restaurant' %>
+    <br>
+    <%= f.radio_button :contactmethod, 'sms' %>
+    <%= label :contactmethod_sms, 'Lounge at home' %>
+    <br>
+    <br>
+<% end %>
+
+<%= form_for :survey_result do |f| %>
+  <p>If you had a chance to travel anywhere in the world, where would you go?</p>
+    <%= f.radio_button :contactmethod, 'email', :checked => true %> 
+    <%= label :contactmethod_email, 'Marathoning in Berlin' %>
+    <br>
+    <%= f.radio_button :contactmethod, 'sms' %>
+    <%= label :contactmethod_sms, 'Spa in Iceland' %>
+    <br>
+    <%= f.radio_button :contactmethod, 'sms' %>
+    <%= label :contactmethod_sms, 'Winery tour in Italy' %>
+    <br>
+    <%= f.radio_button :contactmethod, 'sms' %>
+    <%= label :contactmethod_sms, 'Vegas Debauchery Weekend' %>
+    <br> 
+    <br>
+<% end %>
+
+  <p>Pick your favorite cuisine:</p>
+    <%= f.radio_button :contactmethod, 'email', :checked => true %> 
+    <%= label :contactmethod_email, 'Greek' %>
+    <br>
+    <%= f.radio_button :contactmethod, 'sms' %>
+    <%= label :contactmethod_sms, 'Mediterranean' %>
+    <br>
+    <%= f.radio_button :contactmethod, 'sms' %>
+    <%= label :contactmethod_sms, 'French' %>
+    <br>
+    <%= f.radio_button :contactmethod, 'sms' %>
+    <%= label :contactmethod_sms, 'American' %>
+<br>
+<br>
+  <p>How adventurous are you?</p>
+    <%= f.radio_button :contactmethod, 'email', :checked => true %> 
+    <%= label :contactmethod_email, 'VERY' %>
+    <br>
+    <%= f.radio_button :contactmethod, 'sms' %>
+    <%= label :contactmethod_sms, 'Sometimes..' %>
+    <br>
+    <%= f.radio_button :contactmethod, 'sms' %>
+    <%= label :contactmethod_sms, 'Not at all.' %>
+    <br>
+    <%= f.radio_button :contactmethod, 'sms' %>
+    <%= label :contactmethod_sms, "What's does that even mean?" %>
+<br>
+<br>
+  <p>If you were stranded on an island, what would you bring?</p>
+    <%= f.radio_button :contactmethod, 'email', :checked => true %> 
+    <%= label :contactmethod_email, 'Pair of running shoes' %>
+    <br>
+    <%= f.radio_button :contactmethod, 'sms' %>
+    <%= label :contactmethod_sms, 'Smoothie and sunscreen' %>
+    <br>
+    <%= f.radio_button :contactmethod, 'sms' %>
+    <%= label :contactmethod_sms, 'Best bottle of wine' %>
+    <br>
+    <%= f.radio_button :contactmethod, 'sms' %>
+    <%= label :contactmethod_sms, 'Uh, a sandwich.' %>
+<br>
+<br>
+  <p>What was the last genre of book you read?</p>
+    <%= f.radio_button :contactmethod, 'email', :checked => true %> 
+    <%= label :contactmethod_email, 'Outdoor or Sports' %>
+    <br>
+    <%= f.radio_button :contactmethod, 'sms' %>
+    <%= label :contactmethod_sms, 'Nutrition' %>
+    <br>
+    <%= f.radio_button :contactmethod, 'sms' %>
+    <%= label :contactmethod_sms, 'Food' %>
+    <br>
+    <%= f.radio_button :contactmethod, 'sms' %>
+    <%= label :contactmethod_sms, 'Fiction' %>
+<br>
+<br>
+  <p>If you could sit down with a cultural figure, who would it be?</p>
+    <%= f.radio_button :contactmethod, 'email', :checked => true %> 
+    <%= label :contactmethod_email, 'Michael Jordan' %>
+    <br>
+    <%= f.radio_button :contactmethod, 'sms' %>
+    <%= label :contactmethod_sms, 'Gweneth Paltrow' %>
+    <br>
+    <%= f.radio_button :contactmethod, 'sms' %>
+    <%= label :contactmethod_sms, 'Gordon Ramsey' %>
+    <br>
+    <%= f.radio_button :contactmethod, 'sms' %>
+    <%= label :contactmethod_sms, 'Kim Kardashian' %>
+<% end %>
+
