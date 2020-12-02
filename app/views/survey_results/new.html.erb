@@ -2,7 +2,7 @@
 
 <%= form_for :survey_result do |f| %>
   <p>What do you like to do in your free time?</p>
-    <%= f.radio_button :contactmethod, 'email', :checked => true %> 
+    <%= f.radio_button :contactmethod, 'email', :checked => false %> 
     <%= label :contactmethod_email, 'Workout' %>
     <br>
     <%= f.radio_button :contactmethod, 'sms' %>
@@ -19,7 +19,7 @@
 
 <%= form_for :survey_result do |f| %>
   <p>If you had a chance to travel anywhere in the world, where would you go?</p>
-    <%= f.radio_button :contactmethod, 'email', :checked => true %> 
+    <%= f.radio_button :contactmethod, 'email', :checked => false %> 
     <%= label :contactmethod_email, 'Marathoning in Berlin' %>
     <br>
     <%= f.radio_button :contactmethod, 'sms' %>
@@ -34,8 +34,9 @@
     <br>
 <% end %>
 
+<%= form_for :survey_result do |f| %>
   <p>Pick your favorite cuisine:</p>
-    <%= f.radio_button :contactmethod, 'email', :checked => true %> 
+    <%= f.radio_button :contactmethod, 'email', :checked => false %> 
     <%= label :contactmethod_email, 'Greek' %>
     <br>
     <%= f.radio_button :contactmethod, 'sms' %>
@@ -48,8 +49,11 @@
     <%= label :contactmethod_sms, 'American' %>
 <br>
 <br>
+<% end %>
+
+<%= form_for :survey_result do |f| %>
   <p>How adventurous are you?</p>
-    <%= f.radio_button :contactmethod, 'email', :checked => true %> 
+    <%= f.radio_button :contactmethod, 'email', :checked => false %> 
     <%= label :contactmethod_email, 'VERY' %>
     <br>
     <%= f.radio_button :contactmethod, 'sms' %>
@@ -62,8 +66,11 @@
     <%= label :contactmethod_sms, "What's does that even mean?" %>
 <br>
 <br>
+<% end %>
+
+<%= form_for :survey_result do |f| %>
   <p>If you were stranded on an island, what would you bring?</p>
-    <%= f.radio_button :contactmethod, 'email', :checked => true %> 
+    <%= f.radio_button :contactmethod, 'email', :checked => false %> 
     <%= label :contactmethod_email, 'Pair of running shoes' %>
     <br>
     <%= f.radio_button :contactmethod, 'sms' %>
@@ -76,8 +83,11 @@
     <%= label :contactmethod_sms, 'Uh, a sandwich.' %>
 <br>
 <br>
+<% end %>
+
+<%= form_for :survey_result do |f| %>
   <p>What was the last genre of book you read?</p>
-    <%= f.radio_button :contactmethod, 'email', :checked => true %> 
+    <%= f.radio_button :contactmethod, 'email', :checked => false %> 
     <%= label :contactmethod_email, 'Outdoor or Sports' %>
     <br>
     <%= f.radio_button :contactmethod, 'sms' %>
@@ -90,8 +100,11 @@
     <%= label :contactmethod_sms, 'Fiction' %>
 <br>
 <br>
+<% end %>
+
+<%= form_for :survey_result do |f| %>
   <p>If you could sit down with a cultural figure, who would it be?</p>
-    <%= f.radio_button :contactmethod, 'email', :checked => true %> 
+    <%= f.radio_button :contactmethod, 'email', :checked => false %> 
     <%= label :contactmethod_email, 'Michael Jordan' %>
     <br>
     <%= f.radio_button :contactmethod, 'sms' %>
