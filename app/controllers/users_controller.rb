@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     end 
 
     def create 
-        user = User.create(user)
+        user = User.create(user_params)
     
         redirect_to users_path
       end 

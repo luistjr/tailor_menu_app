@@ -20,13 +20,21 @@ class SurveyResultsController < ApplicationController
         score << params[:survey][:answer_6]
         score << params[:survey][:answer_7]
         
-        athletic = {athletic: score.select {|w| w == "athletic"}.count}
-        healthy = {healthy: score.select {|w| w == "healthy"}.count}
-        foodie = {foodie: score.select {|w| w == "foodie"}.count}
-        hungry = {hungry: score.select {|w| w == "hungry"}.count}
+        # athletic = {athletic: score.select {|w| w == "athletic"}.count}
+        # healthy = {healthy: score.select {|w| w == "healthy"}.count}
+        # foodie = {foodie: score.select {|w| w == "foodie"}.count}
+        # hungry = {hungry: score.select {|w| w == "hungry"}.count}
         
-        ls_scores = [athletic, healthy, foodie, hungry]
-        byebug
+        ls_scores = {
+            athletic: score.select {|w| w == "athletic"}.count, 
+            healthy: score.select {|w| w == "healthy"}.count, 
+            foodie: score.select {|w| w == "foodie"}.count, 
+            hungry: score.select {|w| w == "hungry"}.count
+        }
+
+        # ls_scores.max_by?(key, value)
+        
+            byebug
 
             
 
@@ -37,3 +45,10 @@ class SurveyResultsController < ApplicationController
     end
     
 end
+
+
+# 1. ls_array = ls_scores.max_by{|k, v| v}
+# 2. ls_array[0].to_s
+# 3. Lifestyle.find_by(category: ls_array[0].to_s)
+# 4. a.lifestyle_id = (Lifestyle.find_by(category: ls_array[0].to_s)).id
+#     - assign the lifestyle id to the user's lifestyle_id
