@@ -1,12 +1,18 @@
-<h1>Create an Account </h1>
+<h1 class="title">Create Your Account</h1>
 
   <%= form_for @user do |f| %>
+
+      <%= f.label :username  %>
+      <%= f.text_field :username  %>
+<br>
       <%= f.label :email  %>
       <%= f.text_field :email  %>
-
+<br>
       <%= f.label :password  %>
       <%= f.text_field :password_digest  %>
-
-    <%= f.submit class: "form-btn"%>
+<br>
+<br>
+<button class="button is-success is-rounded"><%= f.submit class: "form-btn"%></button>
+    
     
   <% end %>
