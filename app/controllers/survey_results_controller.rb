@@ -20,14 +20,20 @@ class SurveyResultsController < ApplicationController
         score << params[:survey][:answer_6]
         score << params[:survey][:answer_7]
         
-        athletic = score.select {|w| w == "athletic"}.count
-        healthy = score.select {|w| w == "healthy"}.count
-        foodie = score.select {|w| w == "foodie"}.count
-        hungry = score.select {|w| w == "hungry"}.count
+        athletic = {athletic: score.select {|w| w == "athletic"}.count}
+        healthy = {healthy: score.select {|w| w == "healthy"}.count}
+        foodie = {foodie: score.select {|w| w == "foodie"}.count}
+        hungry = {hungry: score.select {|w| w == "hungry"}.count}
+        
+        ls_scores = [athletic, healthy, foodie, hungry]
         byebug
+
+            
+
     end
 
     def assign_lifestyle
+       
     end
     
 end
