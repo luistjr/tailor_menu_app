@@ -9,8 +9,16 @@ class UsersController < ApplicationController
        @user = User.new
     end 
 
-    def create
-        
-    end 
+    def create 
+        user = User.create(user)
+    
+        redirect_to users_path
+      end 
+    
+      private 
+    
+      def user_params
+        params.require(:user).permit(:username, :email, :password)
+      end 
 
 end
