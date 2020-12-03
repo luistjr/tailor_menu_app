@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :users
 
   post '/survey_results/new', to: 'survey_results#final_score', as: 'results'
-  # post '/survey_results/new', to: 'survey_results#final_score_1'
+  # post '/survey_results/new1', to: 'survey_results#final_score'
   # post '/survey_results/new', to: 'survey_results#final_score_2'
   # post '/survey_results/new', to: 'survey_results#final_score_3'
   # post '/survey_results/new', to: 'survey_results#final_score_4'
