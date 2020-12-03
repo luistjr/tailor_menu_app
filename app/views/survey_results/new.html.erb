@@ -1,127 +1,105 @@
 
 
 <%= form_for :survey do |f| %>
-  <p>What do you like to do in your free time?</p>
-    <%= f.radio_button :answer, 'athletic'%> 
-    <%= label_tag 'Workout' %>
+    <p>What do you like to do in your free time?</p>
+        <%= f.radio_button :answer_1, 'athletic'%> 
+        <%= label_tag 'Workout' %>
     <br>
-    <%= f.radio_button :answer, 'healthy' %>
-    <%= label_tag 'Grab a smoothie, duh' %>
+        <%= f.radio_button :answer_1, 'healthy' %>
+        <%= label_tag 'Grab a smoothie, duh' %>
     <br>
-    <%= f.radio_button :answer, 'foodie' %>
-    <%= label_tag 'Go to the triendiest restaurant' %>
+        <%= f.radio_button :answer_1, 'foodie' %>
+        <%= label_tag 'Go to the triendiest restaurant' %>
     <br>
-    <%= f.radio_button :answer, 'hungry' %>
-    <%= label_tag 'Lounge at home' %>
+        <%= f.radio_button :answer_1, 'hungry' %>
+        <%= label_tag 'Lounge at home' %>
     <br>
-    <%= f.submit 'Submit' %>
-    <br><br>
-<% end %>
-
-<%= form_for :survey_1 do |f| %>
-  <p>If you had a chance to travel anywhere in the world, where would you go?</p>
-    <%= f.radio_button :answer, 'athletic' %> 
-    <%= label_tag 'Marathoning in Berlin' %>
     <br>
-    <%= f.radio_button :answer, 'healthy' %>
-    <%= label_tag 'Spa in Iceland' %>
+      <p>If you had a chance to travel anywhere in the world, where would you go?</p>
+        <%= f.radio_button :answer_2, 'athletic' %> 
+        <%= label_tag 'Marathoning in Berlin' %>
     <br>
-    <%= f.radio_button :answer, 'foodie' %>
-    <%= label_tag 'Winery tour in Italy' %>
+        <%= f.radio_button :answer_2, 'healthy' %>
+        <%= label_tag 'Spa in Iceland' %>
     <br>
-    <%= f.radio_button :answer, 'hungry' %>
-    <%= label_tag 'Vegas Debauchery Weekend' %>
-    <br> 
-    <%= f.submit 'Submit' %>
-    <br><br>
-<% end %>
-
-<%= form_for :survey_2 do |f| %>
-  <p>Pick your favorite cuisine:</p>
-    <%= f.radio_button :answer, 'athletic' %> 
-    <%= label_tag 'Greek' %>
+        <%= f.radio_button :answer_2, 'foodie' %>
+        <%= label_tag 'Winery tour in Italy' %>
     <br>
-    <%= f.radio_button :answer, 'healthy' %>
-    <%= label_tag 'Mediterranean' %>
+        <%= f.radio_button :answer_2, 'hungry' %>
+        <%= label_tag 'Vegas Debauchery Weekend' %>
     <br>
-    <%= f.radio_button :answer, 'foodie' %>
-    <%= label_tag 'French' %>
     <br>
-    <%= f.radio_button :answer, 'hungry' %>
-    <%= label_tag 'American' %>
+      <p>If you could sit down with a cultural figure, who would it be?</p>
+        <%= f.radio_button :answer_3, 'athletic' %> 
+        <%= label_tag 'Michael Jordan' %>
     <br>
-    <%= f.submit 'Submit' %>
-    <br><br>
-<% end %>
-
-<%= form_for :survey_3 do |f| %>
-  <p>How adventurous are you?</p>
-    <%= f.radio_button :answer, 'athletic' %> 
-    <%= label_tag 'VERY' %>
+        <%= f.radio_button :answer_3, 'healthy' %>
+        <%= label_tag 'Gweneth Paltrow' %>
     <br>
-    <%= f.radio_button :answer, 'healthy' %>
-    <%= label_tag 'Sometimes..' %>
+        <%= f.radio_button :answer_3, 'foodie' %>
+        <%= label_tag 'Gordon Ramsey' %>
     <br>
-    <%= f.radio_button :answer, 'foodie' %>
-    <%= label_tag 'Not at all.' %>
+        <%= f.radio_button :answer_3, 'hungry' %>
+        <%= label_tag 'Kim Kardashian' %>
     <br>
-    <%= f.radio_button :answer, 'hungry' %>
-    <%= label_tag "What's does that even mean?" %>
     <br>
-    <%= f.submit 'Submit' %>
-    <br><br>
-<% end %>
-
-<%= form_for :survey_4 do |f| %>
-  <p>If you were stranded on an island, what would you bring?</p>
-    <%= f.radio_button :answer, 'athletic' %> 
-    <%= label_tag 'Pair of running shoes' %>
+      <p>Pick your favorite cuisine:</p>
+        <%= f.radio_button :answer_4, 'athletic' %> 
+        <%= label_tag 'Greek' %>
     <br>
-    <%= f.radio_button :answer, 'healthy' %>
-    <%= label_tag 'Smoothie and sunscreen' %>
+        <%= f.radio_button :answer_4, 'healthy' %>
+        <%= label_tag 'Mediterranean' %>
     <br>
-    <%= f.radio_button :answer, 'foodie' %>
-    <%= label_tag 'Best bottle of wine' %>
+        <%= f.radio_button :answer_4, 'foodie' %>
+        <%= label_tag 'French' %>
     <br>
-    <%= f.radio_button :answer, 'hungry' %>
-    <%= label_tag 'Uh, a sandwich.' %>
+        <%= f.radio_button :answer_4, 'hungry' %>
+        <%= label_tag 'American' %>
     <br>
-    <%= f.submit 'Submit' %>
-    <br><br>
-<% end %>
-
-<%= form_for :survey_5 do |f| %>
-  <p>What was the last genre of book you read?</p>
-    <%= f.radio_button :answer, 'athletic' %> 
-    <%= label_tag 'Outdoor or Sports' %>
     <br>
-    <%= f.radio_button :answer, 'healthy' %>
-    <%= label_tag 'Nutrition' %>
+      <p>How adventurous are you?</p>
+        <%= f.radio_button :answer_5, 'athletic' %> 
+        <%= label_tag 'VERY' %>
     <br>
-    <%= f.radio_button :answer, 'foodie' %>
-    <%= label_tag 'Food' %>
+        <%= f.radio_button :answer_5, 'healthy' %>
+        <%= label_tag 'Sometimes..' %>
     <br>
-    <%= f.radio_button :answer, 'hungry' %>
-    <%= label_tag 'Fiction' %>
+        <%= f.radio_button :answer_5, 'foodie' %>
+        <%= label_tag 'Not at all.' %>
+    <br>
+        <%= f.radio_button :answer_5, 'hungry' %>
+        <%= label_tag "What's does that even mean?" %>
+    <br>
+    <br>
+      <p>If you were stranded on an island, what would you bring?</p>
+        <%= f.radio_button :answer_6, 'athletic' %> 
+        <%= label_tag 'Pair of running shoes' %>
+    <br>
+        <%= f.radio_button :answer_6, 'healthy' %>
+        <%= label_tag 'Smoothie and sunscreen' %>
+    <br>
+        <%= f.radio_button :answer_6, 'foodie' %>
+        <%= label_tag 'Best bottle of wine' %>
+    <br>
+        <%= f.radio_button :answer_6, 'hungry' %>
+        <%= label_tag 'Uh, a sandwich.' %>
+    <br>
+    <br>
+      <p>What was the last genre of book you read?</p>
+        <%= f.radio_button :answer_7, 'athletic' %> 
+        <%= label_tag 'Outdoor or Sports' %>
+    <br>
+        <%= f.radio_button :answer_7, 'healthy' %>
+        <%= label_tag 'Nutrition' %>
+    <br>
+        <%= f.radio_button :answer_7, 'foodie' %>
+        <%= label_tag 'Food' %>
+    <br>
+        <%= f.radio_button :answer_7, 'hungry' %>
+        <%= label_tag 'Fiction' %>
+    <br>
     <br>
     <%= f.submit 'Submit' %>
-    <br><br>
-<% end %>
-
-<%= form_for :survey_6 do |f| %>
-  <p>If you could sit down with a cultural figure, who would it be?</p>
-    <%= f.radio_button :answer, 'athletic' %> 
-    <%= label_tag 'Michael Jordan' %>
     <br>
-    <%= f.radio_button :answer, 'healthy' %>
-    <%= label_tag 'Gweneth Paltrow' %>
     <br>
-    <%= f.radio_button :answer, 'foodie' %>
-    <%= label_tag 'Gordon Ramsey' %>
-    <br>
-    <%= f.radio_button :answer, 'hungry' %>
-    <%= label_tag 'Kim Kardashian' %>
-    <br>
-    <%= f.submit 'Submit' %>
-    
 <% end %>
