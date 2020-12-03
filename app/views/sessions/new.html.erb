@@ -1,0 +1,12 @@
+<%= form_for :session, url: login_path  do |f| %>
+    <label>Enter Your Login Info:</label>
+    <br><br>
+    <%= f.label :username  %>
+    <%= f.text_field :username  %>
+    <br>
+    <%= f.label :password  %>
+    <%= f.text_field :password_digest  %>
+    <br>
+    <br>
+    <button class="button is-success is-rounded"><%= f.submit class: "form-btn"%></button>
+<% end %>

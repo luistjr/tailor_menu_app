@@ -5,13 +5,15 @@ Rails.application.routes.draw do
   resources :lifestyles
   resources :users
 
-  post '/survey_results/new', to: 'survey_results#survey_answers', as: 'results'
-  # post '/survey_results/new', to: 'survey_results#final_score_1'
-  # post '/survey_results/new', to: 'survey_results#final_score_2'
-  # post '/survey_results/new', to: 'survey_results#final_score_3'
-  # post '/survey_results/new', to: 'survey_results#final_score_4'
-  # post '/survey_results/new', to: 'survey_results#final_score_5'
-  # post '/survey_results/new', to: 'survey_results#final_score_6'
+  # post '/users/new', to: 'users#new'
+  # post 'users/new', to: 'sessions#new', as: 'new_login'
+  post '/survey_results/new/', to: 'survey_results#survey_answers', as: 'results'
+  # get "signup", to: "users#new", as: "signup"
+
+  get '/sessions/new', to: 'sessions#new', as: 'new_login'
+  post '/sessions/new', to: "sessions#login", as: 'login'
+
+  post '/users/new', to: 'users#new'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
