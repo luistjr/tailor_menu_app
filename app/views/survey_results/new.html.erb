@@ -1,119 +1,127 @@
 
 
-<%= form_for :survey_result do |f| %>
+<%= form_for :survey do |f| %>
   <p>What do you like to do in your free time?</p>
-    <%= f.radio_button :contactmethod, 'email', :checked => false %> 
-    <%= label :contactmethod_email, 'Workout' %>
+    <%= f.radio_button :answer, 'athletic'%> 
+    <%= label_tag 'Workout' %>
     <br>
-    <%= f.radio_button :contactmethod, 'sms' %>
-    <%= label :contactmethod_sms, 'Grab a smoothie, duh' %>
+    <%= f.radio_button :answer, 'healthy' %>
+    <%= label_tag 'Grab a smoothie, duh' %>
     <br>
-    <%= f.radio_button :contactmethod, 'sms' %>
-    <%= label :contactmethod_sms, 'Go to the triendiest restaurant' %>
+    <%= f.radio_button :answer, 'foodie' %>
+    <%= label_tag 'Go to the triendiest restaurant' %>
     <br>
-    <%= f.radio_button :contactmethod, 'sms' %>
-    <%= label :contactmethod_sms, 'Lounge at home' %>
+    <%= f.radio_button :answer, 'hungry' %>
+    <%= label_tag 'Lounge at home' %>
     <br>
-    <br>
+    <%= f.submit 'Submit' %>
+    <br><br>
 <% end %>
 
-<%= form_for :survey_result do |f| %>
+<%= form_for :survey_1 do |f| %>
   <p>If you had a chance to travel anywhere in the world, where would you go?</p>
-    <%= f.radio_button :contactmethod, 'email', :checked => false %> 
-    <%= label :contactmethod_email, 'Marathoning in Berlin' %>
+    <%= f.radio_button :answer, 'athletic' %> 
+    <%= label_tag 'Marathoning in Berlin' %>
     <br>
-    <%= f.radio_button :contactmethod, 'sms' %>
-    <%= label :contactmethod_sms, 'Spa in Iceland' %>
+    <%= f.radio_button :answer, 'healthy' %>
+    <%= label_tag 'Spa in Iceland' %>
     <br>
-    <%= f.radio_button :contactmethod, 'sms' %>
-    <%= label :contactmethod_sms, 'Winery tour in Italy' %>
+    <%= f.radio_button :answer, 'foodie' %>
+    <%= label_tag 'Winery tour in Italy' %>
     <br>
-    <%= f.radio_button :contactmethod, 'sms' %>
-    <%= label :contactmethod_sms, 'Vegas Debauchery Weekend' %>
+    <%= f.radio_button :answer, 'hungry' %>
+    <%= label_tag 'Vegas Debauchery Weekend' %>
     <br> 
-    <br>
+    <%= f.submit 'Submit' %>
+    <br><br>
 <% end %>
 
-<%= form_for :survey_result do |f| %>
+<%= form_for :survey_2 do |f| %>
   <p>Pick your favorite cuisine:</p>
-    <%= f.radio_button :contactmethod, 'email', :checked => false %> 
-    <%= label :contactmethod_email, 'Greek' %>
+    <%= f.radio_button :answer, 'athletic' %> 
+    <%= label_tag 'Greek' %>
     <br>
-    <%= f.radio_button :contactmethod, 'sms' %>
-    <%= label :contactmethod_sms, 'Mediterranean' %>
+    <%= f.radio_button :answer, 'healthy' %>
+    <%= label_tag 'Mediterranean' %>
     <br>
-    <%= f.radio_button :contactmethod, 'sms' %>
-    <%= label :contactmethod_sms, 'French' %>
+    <%= f.radio_button :answer, 'foodie' %>
+    <%= label_tag 'French' %>
     <br>
-    <%= f.radio_button :contactmethod, 'sms' %>
-    <%= label :contactmethod_sms, 'American' %>
-<br>
-<br>
+    <%= f.radio_button :answer, 'hungry' %>
+    <%= label_tag 'American' %>
+    <br>
+    <%= f.submit 'Submit' %>
+    <br><br>
 <% end %>
 
-<%= form_for :survey_result do |f| %>
+<%= form_for :survey_3 do |f| %>
   <p>How adventurous are you?</p>
-    <%= f.radio_button :contactmethod, 'email', :checked => false %> 
-    <%= label :contactmethod_email, 'VERY' %>
+    <%= f.radio_button :answer, 'athletic' %> 
+    <%= label_tag 'VERY' %>
     <br>
-    <%= f.radio_button :contactmethod, 'sms' %>
-    <%= label :contactmethod_sms, 'Sometimes..' %>
+    <%= f.radio_button :answer, 'healthy' %>
+    <%= label_tag 'Sometimes..' %>
     <br>
-    <%= f.radio_button :contactmethod, 'sms' %>
-    <%= label :contactmethod_sms, 'Not at all.' %>
+    <%= f.radio_button :answer, 'foodie' %>
+    <%= label_tag 'Not at all.' %>
     <br>
-    <%= f.radio_button :contactmethod, 'sms' %>
-    <%= label :contactmethod_sms, "What's does that even mean?" %>
-<br>
-<br>
+    <%= f.radio_button :answer, 'hungry' %>
+    <%= label_tag "What's does that even mean?" %>
+    <br>
+    <%= f.submit 'Submit' %>
+    <br><br>
 <% end %>
 
-<%= form_for :survey_result do |f| %>
+<%= form_for :survey_4 do |f| %>
   <p>If you were stranded on an island, what would you bring?</p>
-    <%= f.radio_button :contactmethod, 'email', :checked => false %> 
-    <%= label :contactmethod_email, 'Pair of running shoes' %>
+    <%= f.radio_button :answer, 'athletic' %> 
+    <%= label_tag 'Pair of running shoes' %>
     <br>
-    <%= f.radio_button :contactmethod, 'sms' %>
-    <%= label :contactmethod_sms, 'Smoothie and sunscreen' %>
+    <%= f.radio_button :answer, 'healthy' %>
+    <%= label_tag 'Smoothie and sunscreen' %>
     <br>
-    <%= f.radio_button :contactmethod, 'sms' %>
-    <%= label :contactmethod_sms, 'Best bottle of wine' %>
+    <%= f.radio_button :answer, 'foodie' %>
+    <%= label_tag 'Best bottle of wine' %>
     <br>
-    <%= f.radio_button :contactmethod, 'sms' %>
-    <%= label :contactmethod_sms, 'Uh, a sandwich.' %>
-<br>
-<br>
+    <%= f.radio_button :answer, 'hungry' %>
+    <%= label_tag 'Uh, a sandwich.' %>
+    <br>
+    <%= f.submit 'Submit' %>
+    <br><br>
 <% end %>
 
-<%= form_for :survey_result do |f| %>
+<%= form_for :survey_5 do |f| %>
   <p>What was the last genre of book you read?</p>
-    <%= f.radio_button :contactmethod, 'email', :checked => false %> 
-    <%= label :contactmethod_email, 'Outdoor or Sports' %>
+    <%= f.radio_button :answer, 'athletic' %> 
+    <%= label_tag 'Outdoor or Sports' %>
     <br>
-    <%= f.radio_button :contactmethod, 'sms' %>
-    <%= label :contactmethod_sms, 'Nutrition' %>
+    <%= f.radio_button :answer, 'healthy' %>
+    <%= label_tag 'Nutrition' %>
     <br>
-    <%= f.radio_button :contactmethod, 'sms' %>
-    <%= label :contactmethod_sms, 'Food' %>
+    <%= f.radio_button :answer, 'foodie' %>
+    <%= label_tag 'Food' %>
     <br>
-    <%= f.radio_button :contactmethod, 'sms' %>
-    <%= label :contactmethod_sms, 'Fiction' %>
-<br>
-<br>
+    <%= f.radio_button :answer, 'hungry' %>
+    <%= label_tag 'Fiction' %>
+    <br>
+    <%= f.submit 'Submit' %>
+    <br><br>
 <% end %>
 
-<%= form_for :survey_result do |f| %>
+<%= form_for :survey_6 do |f| %>
   <p>If you could sit down with a cultural figure, who would it be?</p>
-    <%= f.radio_button :contactmethod, 'email', :checked => false %> 
-    <%= label :contactmethod_email, 'Michael Jordan' %>
+    <%= f.radio_button :answer, 'athletic' %> 
+    <%= label_tag 'Michael Jordan' %>
     <br>
-    <%= f.radio_button :contactmethod, 'sms' %>
-    <%= label :contactmethod_sms, 'Gweneth Paltrow' %>
+    <%= f.radio_button :answer, 'healthy' %>
+    <%= label_tag 'Gweneth Paltrow' %>
     <br>
-    <%= f.radio_button :contactmethod, 'sms' %>
-    <%= label :contactmethod_sms, 'Gordon Ramsey' %>
+    <%= f.radio_button :answer, 'foodie' %>
+    <%= label_tag 'Gordon Ramsey' %>
     <br>
-    <%= f.radio_button :contactmethod, 'sms' %>
-    <%= label :contactmethod_sms, 'Kim Kardashian' %>
+    <%= f.radio_button :answer, 'hungry' %>
+    <%= label_tag 'Kim Kardashian' %>
+    <br>
+    <%= f.submit 'Submit' %>
+    
 <% end %>
-

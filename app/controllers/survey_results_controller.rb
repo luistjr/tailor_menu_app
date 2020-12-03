@@ -3,7 +3,14 @@ class SurveyResultsController < ApplicationController
     def index
     end 
 
-    def show
-        @survey_result = SurveyResult.find(params[:id])
-    end 
+    def new
+    end
+
+    @@score = []
+
+    def final_score
+        @@score << params[:survey][:answer]
+        byebug
+    end
+    
 end
