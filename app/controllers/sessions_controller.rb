@@ -21,10 +21,10 @@ class SessionsController < ApplicationController
   end 
 
 
-  def create
+    def create
       session[:user_id] = params[:user.id]
       redirect_to '/survey_results/new'
-end 
+    end 
 
     # def create
     #     # no strong params cause there is no mass assignment
