@@ -31,16 +31,16 @@
         <div id="navbarMenuHeroB" class="navbar-menu">
           <div class="navbar-end">
             <a class="navbar-item is-active">
-            <button class="button is-link">
-              <%=button_to "Home", users_path%></button>
+              <%=button_to "Home", users_path, method: :get %>
+            </a>
+
+            <!-- Why is there a question mark after users? -->
+
+            <a class="navbar-item">
+              <%=button_to "Log In", new_login_path, method: :get %>
             </a>
             <a class="navbar-item">
-            <button class="button is-link">
-              <%=button_to "Log In", new_login_path%></button>
-            </a>
-            <a class="navbar-item">
-            <button class="button is-link">
-              <%=button_to "Sign Up", new_user_path%></button>
+              <%=button_to "Sign Up", new_user_path%>
             </a>
           </div>
         </div>

@@ -15,8 +15,11 @@ Rails.application.routes.draw do
 
   get '/sessions/new', to: 'sessions#new', as: 'new_login'
   post '/sessions/new', to: "sessions#login", as: 'login'
+  delete '/sessions/reset', to: 'sessions#logout', as: 'logout'
 
   post '/users/new', to: 'users#new'
+
+  
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

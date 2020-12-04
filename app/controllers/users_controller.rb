@@ -14,7 +14,7 @@ class UsersController < ApplicationController
         user = User.create(user_params)
 
         if user.valid? 
-          session[:user_id] = user.id
+          cookies[:user_id] = user.id
           redirect_to new_survey_result_path
         else
           flash[:my_errors] = user.errors.full_messages

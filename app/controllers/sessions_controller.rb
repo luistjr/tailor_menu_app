@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
     end
 
     def login
-        user = User.find_by(username: params[:session][:username])
+        user = User.find_by(username: params[:session][:user_id])
     
         if user #&& alien.authenticate(params[:session][:password])
           cookies[:user_id] = user.id
@@ -14,6 +14,11 @@ class SessionsController < ApplicationController
           redirect_to new_login_path
         end 
     end 
+
+  def logout
+      cookies.delete(:user_id)
+      redirect_to '/users'
+  end 
 
 
   def create
