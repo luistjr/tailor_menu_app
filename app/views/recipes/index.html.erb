@@ -1,0 +1,12 @@
+
+<% recipes = (Recipe.all.select {|r| r.lifestyle_id == 1}).sample(3) %>
+
+<% recipes.each do |r| %>
+<ul>
+    <li><%= r.title %></li>
+    <li><%= r.ready_in_minutes %></li>
+    <li><%= link_to r.source_url %></li>
+    <li><img src="<%= r.image %>"></li>
+    <li><%= r.summary %></li><br><br>
+</ul>
+<% end %>
