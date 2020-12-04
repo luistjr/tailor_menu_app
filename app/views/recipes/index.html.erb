@@ -1,0 +1,6 @@
+
+<% recipes = Recipe.all.select {|r| r.lifestyle_id == 1} %>
+
+<ul>
+    <li><%= recipes.sample(3) %></li>
+</ul>

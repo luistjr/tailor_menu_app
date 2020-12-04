@@ -1,8 +1,7 @@
 class RecipesController < ApplicationController
-    def new
+    def index
+        @recipes = Recipe.all
+        @lifestyles = Lifestyle.all
     end
-
-    def create
-        
-    end
+   
 end

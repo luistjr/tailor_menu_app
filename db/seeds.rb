@@ -14,12 +14,12 @@ Lifestyle.destroy_all
 User.destroy_all
 Recipe.destroy_all
 
-a = Lifestyle.create(category: "athletic", description: "an athletic person")
-b = Lifestyle.create(category: "healthy", description: "a healthy person")
-c = Lifestyle.create(category: "foodie", description: "a foodie person")
-d = Lifestyle.create(category: "hungry", description: "a hungry person")
+Lifestyle.create(category: "athletic", description: "an athletic person")
+Lifestyle.create(category: "healthy", description: "a healthy person")
+Lifestyle.create(category: "foodie", description: "a foodie person")
+Lifestyle.create(category: "hungry", description: "a hungry person")
 
-user = User.create(email: "ant@ant.com", password_digest: "pass123", lifestyle_id: nil, username: "ant_rubbo")
+User.create(email: "ant@ant.com", password_digest: "pass123", lifestyle_id: nil, username: "ant_rubbo")
 
 api_resp_athletic = RestClient.get("https://api.spoonacular.com/recipes/complexSearch?apiKey=af06813e585b487ca17fa4fdf9336090&diet=paleo&addRecipeInformation=true&number=20")
 api_data_athletic = JSON.parse(api_resp_athletic)
@@ -33,6 +33,6 @@ api_data_athletic = JSON.parse(api_resp_athletic)
 # api_resp_hungry = RestClient.get("https://api.spoonacular.com/recipes/complexSearch?apiKey=36c79f20f6f943bda234fd4c5a1c0133&addRecipeInformation=true&number=20")
 # api_data_hungry = JSON.parse(api_resp_hungry)
 
-api_data_athletic["results"].each { |r| Recipe.create(title: r["title"], ready_in_minutes: r["readyInMinutes"], source_url: r["sourceUrl"], image: r["image"], summary: ["summary"], lifestyle_id: a.id)}
+api_data_athletic["results"].each { |r| Recipe.create(title: r["title"], ready_in_minutes: r["readyInMinutes"], source_url: r["sourceUrl"], image: r["image"], summary: ["summary"], lifestyle_id: Lifestyle.first.id)}
 
-binding.pry
+# binding.pry
