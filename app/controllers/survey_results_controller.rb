@@ -46,4 +46,4 @@ end
 # 2. ls_array[0].to_s
 # 3. Lifestyle.find_by(category: ls_array[0].to_s)
 # 4. a.lifestyle_id = (Lifestyle.find_by(category: ls_array[0].to_s)).id
-#     - assign the lifestyle id to the user's lifestyle_id
+# 5. @current_user.lifestyle_id = lifestyle_id
