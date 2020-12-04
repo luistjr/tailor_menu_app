@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   post '/survey_results/new/', to: 'survey_results#survey_answers', as: 'results'
   # get "signup", to: "users#new", as: "signup"
 
+  # get “/login”, to: “sessions#new” 
+  # post “/login”, to: “sessions#create” 
+
   get '/sessions/new', to: 'sessions#new', as: 'new_login'
   post '/sessions/new', to: "sessions#login", as: 'login'
 

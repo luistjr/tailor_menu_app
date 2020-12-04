@@ -9,7 +9,6 @@ class SurveyResultsController < ApplicationController
     end
 
     
-
     def survey_answers
         score = []
         score << params[:survey][:answer_1]
@@ -35,13 +34,9 @@ class SurveyResultsController < ApplicationController
         # ls_scores.max_by?(key, value)
         
             byebug
-
-            
-
     end
 
     def assign_lifestyle
-       
     end
     
 end

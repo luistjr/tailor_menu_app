@@ -15,6 +15,12 @@ class SessionsController < ApplicationController
         end 
     end 
 
+
+  def create
+      session[:user_id] = params[:user.id]
+      redirect_to '/survey_results/new'
+end 
+
     # def create
     #     # no strong params cause there is no mass assignment
     #     @user = User.find_by(username: params[:username])
