@@ -37,10 +37,19 @@
             <!-- Why is there a question mark after users? -->
 
             <a class="navbar-item">
+            <% if @current_user%>
+              <%=button_to "Logout", logout_path, method: :delete%>
+            <% else %>
               <%=button_to "Log In", new_login_path, method: :get %>
+            <% end %>
             </a>
+            
             <a class="navbar-item">
-              <%=button_to "Sign Up", new_user_path%>
+              <% if @current_user %>
+                  Welcome <%= @current_user.username %>
+              <% else %>
+                  <%=button_to "Sign Up", new_user_path%>
+              <% end %>
             </a>
           </div>
         </div>
