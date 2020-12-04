@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   # post '/users/new', to: 'users#new'
   # post 'users/new', to: 'sessions#new', as: 'new_login'
-  post '/survey_results/new/', to: 'survey_results#survey_answers', as: 'results'
+  post '/survey_results/new/', to: 'survey_results#assign_lifestyle', as: 'results'
   # get "signup", to: "users#new", as: "signup"
 
   # get “/login”, to: “sessions#new” 
