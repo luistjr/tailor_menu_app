@@ -4,9 +4,9 @@ class SessionsController < ApplicationController
     end
 
     def login
-        user = User.find_by(username: params[:session][:user_id])
+        user = User.find_by(username: params[:session][:username])
     
-        if user #&& alien.authenticate(params[:session][:password])
+        if user && user.authenticate(params[:session][:password])
           cookies[:user_id] = user.id
           redirect_to user_path(user)
         else
