@@ -37,10 +37,10 @@ class SurveyResultsController < ApplicationController
 
     def assign_lifestyle
         ls_array = survey_answers.max_by{|k, v| v}
-        ls_array[0].to_s
-        Lifestyle.find_by(category: ls_array[0].to_s)
-        @current_user.lifestyle_id = (Lifestyle.find_by(category: ls_array[0].to_s)).id
-    end
+        number = (Lifestyle.find_by(category: ls_array[0].to_s)).id
+        @current_user.lifestyle_id = number
+        redirect_to user_path(@current_user)
+    end 
     
 end
 
