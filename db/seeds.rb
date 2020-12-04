@@ -33,6 +33,6 @@ api_data_athletic = JSON.parse(api_resp_athletic)
 # api_resp_hungry = RestClient.get("https://api.spoonacular.com/recipes/complexSearch?apiKey=36c79f20f6f943bda234fd4c5a1c0133&addRecipeInformation=true&number=20")
 # api_data_hungry = JSON.parse(api_resp_hungry)
 
-api_data_athletic["results"].each { |r| Recipe.create(title: r["title"], ready_in_minutes: r["readyInMinutes"], source_url: r["sourceUrl"], image: r["image"], summary: ["summary"], lifestyle_id: Lifestyle.first.id)}
+api_data_athletic["results"].each { |r| Recipe.create(title: r["title"], ready_in_minutes: r["readyInMinutes"], source_url: r["sourceUrl"], image: r["image"], summary: r["summary"], lifestyle_id: Lifestyle.first.id)}
 
 # binding.pry
