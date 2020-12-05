@@ -1,13 +1,6 @@
 class SurveyResultsController < ApplicationController
-    def index
-    end 
-
-    def show
-    end
-
     def new
     end
-
     
     def survey_answers
         score = []
@@ -19,27 +12,21 @@ class SurveyResultsController < ApplicationController
         score << params[:survey][:answer_6]
         score << params[:survey][:answer_7]
         
-        # athletic = {athletic: score.select {|w| w == "athletic"}.count}
-        # healthy = {healthy: score.select {|w| w == "healthy"}.count}
-        # foodie = {foodie: score.select {|w| w == "foodie"}.count}
-        # hungry = {hungry: score.select {|w| w == "hungry"}.count}
-        
         ls_scores = {
             athletic: score.select {|w| w == "athletic"}.count, 
             healthy: score.select {|w| w == "healthy"}.count, 
             foodie: score.select {|w| w == "foodie"}.count, 
             hungry: score.select {|w| w == "hungry"}.count
         }
-
-        # ls_scores.max_by?(key, value)
-        
     end
 
     def assign_lifestyle
         ls_array = survey_answers.max_by{|k, v| v}
         number = (Lifestyle.find_by(category: ls_array[0].to_s)).id
+        SurveyResult.create(user_id: @current_user.id, lifestyle_id: number)
         @current_user.lifestyle_id = number
         redirect_to user_path(@current_user)
+        byebug
     end 
     
 end

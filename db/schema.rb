@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_02_205150) do
+ActiveRecord::Schema.define(version: 2020_12_05_195157) do
 
   create_table "lifestyles", force: :cascade do |t|
     t.string "category"
@@ -41,7 +41,6 @@ ActiveRecord::Schema.define(version: 2020_12_02_205150) do
   end
 
   create_table "survey_results", force: :cascade do |t|
-    t.string "completion_result"
     t.integer "lifestyle_id"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false

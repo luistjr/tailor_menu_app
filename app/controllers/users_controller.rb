@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   def index
     @users = User.all
   end
@@ -15,25 +14,23 @@ class UsersController < ApplicationController
   def create 
     user = User.create(user_params)
 
-        if user.valid? 
-          cookies[:user_id] = user.id
-          redirect_to new_survey_result_path
-        else
-          flash[:my_errors] = user.errors.full_messages
-          redirect_to new_user_path
-        end 
-      end 
+    if user.valid? 
+      cookies[:user_id] = user.id
+      redirect_to new_survey_result_path
+    else
+      flash[:my_errors] = user.errors.full_messages
+      redirect_to new_user_path
+    end 
+  end 
 
-      def password
-        "test value"
-      end 
+  def password
+    "test value"
+  end 
     
   private 
     
   def user_params
     params.require(:user).permit(:username, :email, :password)
   end 
-
-  
 
 end

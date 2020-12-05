@@ -19,7 +19,7 @@ Lifestyle.create(category: "healthy", description: "a healthy person")
 Lifestyle.create(category: "foodie", description: "a foodie person")
 Lifestyle.create(category: "hungry", description: "a hungry person")
 
-User.create(email: "ant@ant.com", password_digest: "pass123", lifestyle_id: nil, username: "ant_rubbo")
+# User.create(email: "ant@ant.com", password_digest: "pass123", lifestyle_id: 1, username: "ant_rubbo")
 
 api_resp_athletic = RestClient.get("https://api.spoonacular.com/recipes/complexSearch?apiKey=af06813e585b487ca17fa4fdf9336090&diet=paleo&addRecipeInformation=true&number=20")
 api_data_athletic = JSON.parse(api_resp_athletic)
@@ -34,5 +34,8 @@ api_data_athletic = JSON.parse(api_resp_athletic)
 # api_data_hungry = JSON.parse(api_resp_hungry)
 
 api_data_athletic["results"].each { |r| Recipe.create(title: r["title"], ready_in_minutes: r["readyInMinutes"], source_url: r["sourceUrl"], image: r["image"], summary: r["summary"], lifestyle_id: Lifestyle.first.id)}
+# api_data_healthy["results"].each { |r| Recipe.create(title: r["title"], ready_in_minutes: r["readyInMinutes"], source_url: r["sourceUrl"], image: r["image"], summary: r["summary"], lifestyle_id: Lifestyle.second.id)}
+# api_data_foodie["results"].each { |r| Recipe.create(title: r["title"], ready_in_minutes: r["readyInMinutes"], source_url: r["sourceUrl"], image: r["image"], summary: r["summary"], lifestyle_id: Lifestyle.third.id)}
+# api_data_hungry["results"].each { |r| Recipe.create(title: r["title"], ready_in_minutes: r["readyInMinutes"], source_url: r["sourceUrl"], image: r["image"], summary: r["summary"], lifestyle_id: Lifestyle.fourth.id)}
 
 # binding.pry
