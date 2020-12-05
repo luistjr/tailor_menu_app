@@ -1,7 +1,10 @@
 
-<% recipes = (Recipe.all.select {|r| r.lifestyle_id == 1}).sample(3) %>
+<% athletic_recipes = (Recipe.all.select {|r| r.lifestyle_id == 1}).sample(3) %>
+<% healthy_recipes = (Recipe.all.select {|r| r.lifestyle_id == 2}).sample(3) %>
+<% foodie_recipes = (Recipe.all.select {|r| r.lifestyle_id == 3}).sample(3) %>
+<% hungry_recipes = (Recipe.all.select {|r| r.lifestyle_id == 4}).sample(3) %>
 
-<% recipes.each do |r| %>
+<% athletic_recipes.each do |r| %>
 <ul>
     <li><%= r.title %></li>
     <li><%= r.ready_in_minutes %></li>

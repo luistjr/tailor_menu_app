@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   # get “/login”, to: “sessions#new” 
   # post “/login”, to: “sessions#create” 
 
+  get 'users/recipes/index', to: 'recipes#index', as: 'recipes_path'
+
   get '/sessions/new', to: 'sessions#new', as: 'new_login'
   post '/sessions/new', to: "sessions#login", as: 'login'
   delete '/sessions/reset', to: 'sessions#logout', as: 'logout'

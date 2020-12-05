@@ -26,7 +26,7 @@ class SurveyResultsController < ApplicationController
         SurveyResult.create(user_id: @current_user.id, lifestyle_id: number)
         @current_user.lifestyle_id = number
         redirect_to user_path(@current_user)
-        byebug
+        # byebug
     end 
     
 end
