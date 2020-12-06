@@ -1,9 +1,13 @@
 <h1><%= "Welcome #{@current_user.username}!" %></h1>
 <br>
 
-<h3>Looks like you're a pretty <%= "#{@current_user.lifestyles[-1].category}" %> person.</h3>
-<br>
-<p>Click <%= link_to "here", 'recipes/index' %> to see your curated recipes!</p> 
-<br>
+<% if @current_user.lifestyles == [] %>
+    <p>It looks like you haven't taken a survey yet. Please take it <%= link_to " here!", new_survey_result_path %></p>
+<% else %>
+    <h3>Looks like you're a pretty <%= "#{@current_user.lifestyles[-1].category}" %> person.</h3>
+    <br>
+    <p>Click <%= link_to "here", 'recipes/index' %> to see your curated recipes!</p> 
+    <br>
+    <h3>Not feeling <%= "#{@current_user.lifestyles[-1].category}" %>? Click <%= link_to "here", '/survey_results/new'%> to retake your survey!</h3>
+<% end %>
 
-<h3>Not feeling <%= "#{@current_user.lifestyles[-1].category}" %>? Click <%= link_to "here", '/survey_results/new'%> to retake your survey!</h3>

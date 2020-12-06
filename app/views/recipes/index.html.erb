@@ -5,11 +5,17 @@
 <% hungry_recipes = (Recipe.all.select {|r| r.lifestyle_id == 4}).sample(3) %>
 
 <% athletic_recipes.each do |r| %>
-<ul>
-    <li><%= r.title %></li>
-    <li><%= r.ready_in_minutes %></li>
-    <li><%= link_to r.source_url %></li>
-    <li><img src="<%= r.image %>"></li>
-    <li><%= r.summary %></li><br><br>
+<center><ul>
+    <li><b><%= r.title %></b></li>
+    <li>Ready in <%= r.ready_in_minutes %> minutes</li>     
+    <li><%= link_to "Full Recipe", r.source_url %></li> 
+    <br>    
+    <li><img src="<%= r.image %>" alt="<%= r.title %>"%></li>
+    <br>
+    <br>
+    <li> <%= r.summary %></li>
+    <br>
+    <br>
 </ul>
+</center>
 <% end %>

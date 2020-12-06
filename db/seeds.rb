@@ -23,7 +23,7 @@ Lifestyle.create(category: "hungry", description: "a hungry person")
 
 api_resp_athletic = RestClient.get("https://api.spoonacular.com/recipes/complexSearch?apiKey=af06813e585b487ca17fa4fdf9336090&diet=paleo&addRecipeInformation=true&number=20")
 api_data_athletic = JSON.parse(api_resp_athletic)
-
+ 
 # api_resp_healthy = RestClient.get("https://api.spoonacular.com/recipes/complexSearch?apiKey=36c79f20f6f943bda234fd4c5a1c0133&diet=whole30&addRecipeInformation=true&number=20")
 # api_data_healthy = JSON.parse(api_resp_healthy)
 

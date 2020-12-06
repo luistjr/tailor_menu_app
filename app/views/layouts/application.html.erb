@@ -34,7 +34,11 @@
               <%=button_to "Home", users_path, method: :get %>
             </a>
 
-            <!-- Why is there a question mark after users? -->
+            <a class="navbar-item">
+            <% if @current_user%>
+              <%=button_to "Lifestyle Results", user_path(@current_user), method: :get%>
+            <% end %>
+            </a>
 
             <a class="navbar-item">
             <% if @current_user%>

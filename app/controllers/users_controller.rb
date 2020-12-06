@@ -23,10 +23,6 @@ class UsersController < ApplicationController
       redirect_to new_user_path
     end 
   end 
-
-  def password
-    "test value"
-  end 
     
   private 
     
