@@ -25,6 +25,9 @@ class SurveyResultsController < ApplicationController
         number = (Lifestyle.find_by(category: ls_array[0].to_s)).id
         SurveyResult.create(user_id: @current_user.id, lifestyle_id: number)
         @current_user.lifestyle_id = number
+        @current_user.save
+        # @current_user.update(lifestyle_id: number)
+        byebug
         redirect_to user_path(@current_user)
     end 
     

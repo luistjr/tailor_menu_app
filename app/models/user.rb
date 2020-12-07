@@ -1,6 +1,7 @@
 class User < ApplicationRecord
     has_many :survey_results
     has_many :lifestyles, through: :survey_results
+    belongs_to :lifestyle, optional: true
 
     has_secure_password
 

@@ -6,7 +6,6 @@
     <%= csp_meta_tag %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -57,7 +56,7 @@
   <div class="hero-body">
     <div class="container has-text-centered">
       <p class="title">
-        Tailor ME(nu)
+        <%= image_tag "logo.png"%>
       </p>
       <p class="subtitle">
         Curated recipes, based on your lifestyle.
@@ -69,9 +68,9 @@
     <nav class="tabs is-boxed is-fullwidth">
       <div class="container">
         <ul>
-          <li class="is-active">
+          <li>
           <% if @current_user%>
-            <a>Recipes</a>
+            <%=link_to "Recipes", recipes_path, method: :get %>
             <% end %>
           </li>
           <li>
@@ -81,7 +80,7 @@
           </li>
           <li>
             <% if @current_user%>
-              <%=link_to "Lifestyle Results", user_path(@current_user), method: :get%>
+              <%=link_to "Lifestyle", user_path(@current_user), method: :get%>
             <% end %>
           </li>
         </ul>

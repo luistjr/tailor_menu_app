@@ -8,21 +8,22 @@
         <ul>
             <section class="hero">
                 <div class="hero-body">
-                <div class="container">
-                <h1 class="title">
-                    <li><b><%=link_to r.provider, r.url, target: "_blank" %></b></li></h1>
-                    <h2 class="subtitle">
-                    <li><%= r.description %></li>     
-                    <li>$<%= r.price.to_f %> per serving</li> 
-                    <br>    
-                    <li><img src="<%= r.image %>" alt="<%= r.provider %>"%></li>
-                    <br>
-                    <br>
-                    </h2>
+                    <div class="container">
+                        <h1 class="title">
+                            <li><b><%=link_to r.provider, r.url, target: "_blank" %></b></li>
+                        </h1>
+                        <h2 class="subtitle">
+                            <li><%= r.description %></li>     
+                            <li>$<%= r.price.to_f %> per serving</li> </h2>
+                            <br>    
+                            <li><img src="<%= r.image %>" alt="<%= r.provider %>"%></li>
+                            <br>
+                            <br>
+                        
                     </div>
-                    </div>
-                    </section>
-                </ul>
+                </div>
+            </section>
+        </ul>
     </center>
 <% end %>
       
