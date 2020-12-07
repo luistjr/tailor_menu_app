@@ -20,7 +20,6 @@
       <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item">
-            <img src="" alt="Logo">
           </a>
           <span class="navbar-burger burger" data-target="navbarMenuHeroB">
             <span></span>
@@ -32,12 +31,6 @@
           <div class="navbar-end">
             <a class="navbar-item is-active">
               <%=button_to "Home", users_path, method: :get %>
-            </a>
-
-            <a class="navbar-item">
-            <% if @current_user%>
-              <%=button_to "Lifestyle Results", user_path(@current_user), method: :get%>
-            <% end %>
             </a>
 
             <a class="navbar-item">
@@ -70,6 +63,30 @@
         Curated recipes, based on your lifestyle.
       </p>
     </div>
+  </div>
+
+  <div class="hero-foot">
+    <nav class="tabs is-boxed is-fullwidth">
+      <div class="container">
+        <ul>
+          <li class="is-active">
+          <% if @current_user%>
+            <a>Recipes</a>
+            <% end %>
+          </li>
+          <li>
+          <% if @current_user%>
+              <%=link_to "Meal Kit", meal_kits_path, method: :get%>
+            <% end %>
+          </li>
+          <li>
+            <% if @current_user%>
+              <%=link_to "Lifestyle Results", user_path(@current_user), method: :get%>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </div>
 
 </section>

@@ -1,0 +1,29 @@
+<% athletic_meal = MealKit.all.select { |r| r.lifestyle_id == 1}%>
+<% healthy_meal = MealKit.all.select { |r| r.lifestyle_id == 2}%>
+<% foodie_meal = MealKit.all.select { |r| r.lifestyle_id == 3}%>
+<% hungry_meal = MealKit.all.select { |r| r.lifestyle_id == 4} %>
+
+<% athletic_meal.each do |r| %>
+    <center>
+        <ul>
+            <section class="hero">
+                <div class="hero-body">
+                <div class="container">
+                <h1 class="title">
+                    <li><b><%=link_to r.provider, r.url, target: "_blank" %></b></li></h1>
+                    <h2 class="subtitle">
+                    <li><%= r.description %></li>     
+                    <li>$<%= r.price.to_f %> per serving</li> 
+                    <br>    
+                    <li><img src="<%= r.image %>" alt="<%= r.provider %>"%></li>
+                    <br>
+                    <br>
+                    </h2>
+                    </div>
+                    </div>
+                    </section>
+                </ul>
+    </center>
+<% end %>
+      
+

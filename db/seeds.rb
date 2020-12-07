@@ -39,3 +39,8 @@ api_data_athletic["results"].each { |r| Recipe.create(title: r["title"], ready_i
 # api_data_hungry["results"].each { |r| Recipe.create(title: r["title"], ready_in_minutes: r["readyInMinutes"], source_url: r["sourceUrl"], image: r["image"], summary: r["summary"], lifestyle_id: Lifestyle.fourth.id)}
 
 # binding.pry
+
+MealKit.create(lifestyle_id: 1, provider: "Freshly", url: "https://www.freshly.com/",  description: "Quick, easy, and to the point.", image: "https://cnet3.cbsistatic.com/img/ZSnqq5MDeKYXxtIopTVd-2T0aA8=/756x425/2019/06/13/b3f97a61-b33e-4ac0-9e50-894ce349efff/production-meal-image-f03d0d38-2c3a-4e70-a4d6-bcd7ece9eb7c.jpg", price: "10.99")
+MealKit.create(lifestyle_id: 2, provider: "Sun Basket", url: "https://sunbasket.com/", description: "Organic, fresh, with lots of diet specific options.", image: "https://cnet3.cbsistatic.com/img/2PHYfi1pvbjNDxM-AdFPEsOgBO8=/756x425/2019/06/13/e7d3c88b-f528-4dd6-bb20-9686f0d4933a/sun-basket-review-2019-chowhound-1.jpg", price: "11.99")
+MealKit.create(lifestyle_id: 3, provider: "Green Chef", url: "https://www.greenchef.com/", description: "Cuisines from all around the world with fresh ingredients.", image: "https://cnet4.cbsistatic.com/img/sKSrHZVH3UaswOvL0dh0rFiZTY8=/756x425/2020/04/20/bba33ee6-8f47-43b0-a46d-ebf869b01839/green-chef-meal-kit.jpg", price: "12.99")
+MealKit.create(lifestyle_id: 4, provider: "Home Chef", url: "https://www.homechef.com/", description: "Large portions that are simple to make.", image: "https://cnet4.cbsistatic.com/img/vG57fDMXwYZtUNPz-xq7jjGwe9k=/756x425/2019/09/23/da5bac72-6e8c-44ea-a387-1a5017dd0e51/box.png", price: "7.99")

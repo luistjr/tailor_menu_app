@@ -1,5 +1,13 @@
-<h1><%= "Welcome #{@current_user.username}!" %></h1>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+<%= "Welcome #{@current_user.username}!" %>
 <br>
+<br>
+</h1>
+
+<h2 class="subtitle">
 
 <% if @current_user.lifestyles == [] %>
     <p>It looks like you haven't taken a survey yet. Please take it <%= link_to " here!", new_survey_result_path %></p>
@@ -9,5 +17,10 @@
     <p>Click <%= link_to "here", 'recipes/index' %> to see your curated recipes!</p> 
     <br>
     <h3>Not feeling <%= "#{@current_user.lifestyles[-1].category}" %>? Click <%= link_to "here", '/survey_results/new'%> to retake your survey!</h3>
-<% end %>
 
+    <%= link_to "MealKit Options", '/meal_kits', method: :get%> 
+<% end %>
+      </h2>
+    </div>
+  </div>
+</section>
