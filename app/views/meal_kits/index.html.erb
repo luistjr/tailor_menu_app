@@ -1,9 +1,5 @@
-<% athletic_meal = MealKit.all.select { |r| r.lifestyle_id == 1}%>
-<% healthy_meal = MealKit.all.select { |r| r.lifestyle_id == 2}%>
-<% foodie_meal = MealKit.all.select { |r| r.lifestyle_id == 3}%>
-<% hungry_meal = MealKit.all.select { |r| r.lifestyle_id == 4} %>
 
-<% athletic_meal.each do |r| %>
+<% @current_user.current_mealkit.each do |r| %>
     <center>
         <ul>
             <section class="hero">

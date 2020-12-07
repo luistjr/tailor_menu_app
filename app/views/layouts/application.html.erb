@@ -55,7 +55,7 @@
 
   <div class="hero-body">
     <div class="container has-text-centered">
-      <p class="title">
+      <p class="title-image">
         <%= image_tag "logo.png"%>
       </p>
       <p class="subtitle">
@@ -68,21 +68,22 @@
     <nav class="tabs is-boxed is-fullwidth">
       <div class="container">
         <ul>
-          <li>
-          <% if @current_user%>
-            <%=link_to "Recipes", recipes_path, method: :get %>
-            <% end %>
-          </li>
-          <li>
-          <% if @current_user%>
-              <%=link_to "Meal Kit", meal_kits_path, method: :get%>
-            <% end %>
-          </li>
-          <li>
-            <% if @current_user%>
+        <li>
+            <% if @current_user %>
               <%=link_to "Lifestyle", user_path(@current_user), method: :get%>
             <% end %>
           </li>
+          <li>
+            <% if @current_user && @current_user.lifestyles != [] %>
+              <%=link_to "Recipes", recipes_path, method: :get %>
+            <% end %>
+          </li>
+          <li>
+            <% if @current_user && @current_user.lifestyles != [] %>
+              <%=link_to "Meal Kit", meal_kits_path, method: :get%>
+            <% end %>
+          </li>
+          
         </ul>
       </div>
     </nav>

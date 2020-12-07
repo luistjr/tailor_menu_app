@@ -1,14 +1,14 @@
+<% athletic_meal = MealKit.all.select { |r| r.lifestyle_id == 1}%>
+<% healthy_meal = MealKit.all.select { |r| r.lifestyle_id == 2}%>
+<% foodie_meal = MealKit.all.select { |r| r.lifestyle_id == 3}%>
+<% hungry_meal = MealKit.all.select { |r| r.lifestyle_id == 4} %>
 
-<% athletic_recipes = (Recipe.all.select {|r| r.lifestyle_id == 1}).sample(3) %>
-<% healthy_recipes = (Recipe.all.select {|r| r.lifestyle_id == 2}).sample(3) %>
-<% foodie_recipes = (Recipe.all.select {|r| r.lifestyle_id == 3}).sample(3) %>
-<% hungry_recipes = (Recipe.all.select {|r| r.lifestyle_id == 4}).sample(3) %>
 
-<% athletic_recipes.each do |r| %>
+<% @current_user.current_recipe_list.each do |r| %>
 <center><ul>
     <li><b><%= r.title %></b></li>
     <li>Ready in <%= r.ready_in_minutes %> minutes</li>     
-    <li><%= link_to "Full Recipe", r.source_url %></li> 
+    <li><%= link_to "Full Recipe", r.source_url, target: "_blank" %></li> 
     <br>    
     <li><img src="<%= r.image %>" alt="<%= r.title %>"%></li>
     <br>
