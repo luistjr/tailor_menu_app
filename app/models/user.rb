@@ -14,7 +14,7 @@ class User < ApplicationRecord
     end 
 
     def current_recipe_list
-        Recipe.all.select {|r| r.lifestyle_id == self.lifestyles[-1].id}
+        Recipe.all.select {|r| r.lifestyle_id == self.lifestyles[-1].id}.sample(3)
     end 
 
     

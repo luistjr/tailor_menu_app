@@ -1,10 +1,9 @@
+<center>
 <% if flash[:errors] %>
 <b> <%= flash[:errors]%> </b>
 <% end %>
-<br> 
-<br> 
 <%= form_for :session, url: login_path  do |f| %>
-    <label>Enter Your Login Info:</label>
+    <label class="title">Enter Your Login Info:</label>
     <br><br>
     <%= f.label :username  %>
     <%= f.text_field :username  %>
@@ -15,3 +14,4 @@
     <br>
     <button class="button is-success is-rounded"><%= f.submit class: "form-btn"%></button>
 <% end %>
+</center>

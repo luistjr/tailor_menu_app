@@ -27,7 +27,7 @@ class SurveyResultsController < ApplicationController
         # @current_user.lifestyle_id = number
         # @current_user.save
         # @current_user.update(lifestyle_id: number)
-        byebug
+        # byebug
         redirect_to user_path(@current_user)
     end 
     

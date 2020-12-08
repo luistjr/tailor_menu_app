@@ -11,7 +11,7 @@
 
     <% if @current_user.lifestyles != [] %>
       <ul>
-        <h3>Looks like you're a pretty <%= @current_user.lifestyles.last.category %>  person.</h3>
+        <h3>Looks like you're a pretty <b><%= @current_user.lifestyles.last.category %></b> person.</h3>
         <br>
         <p>Click <%= link_to "here", 'recipes/index' %> to see your curated recipes, or <%= link_to "here", '/meal_kits' %> for a suggested meal kit!</p> 
         <br>

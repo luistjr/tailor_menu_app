@@ -1,11 +1,6 @@
-<% athletic_meal = MealKit.all.select { |r| r.lifestyle_id == 1}%>
-<% healthy_meal = MealKit.all.select { |r| r.lifestyle_id == 2}%>
-<% foodie_meal = MealKit.all.select { |r| r.lifestyle_id == 3}%>
-<% hungry_meal = MealKit.all.select { |r| r.lifestyle_id == 4} %>
-
-
+<center>
 <% @current_user.current_recipe_list.each do |r| %>
-<center><ul>
+<ul>
     <li><b><%= r.title %></b></li>
     <li>Ready in <%= r.ready_in_minutes %> minutes</li>     
     <li><%= link_to "Full Recipe", r.source_url, target: "_blank" %></li> 
@@ -17,5 +12,10 @@
     <br>
     <br>
 </ul>
-</center>
 <% end %>
+
+<div class="control">
+  <button class="button is-success is-rounded"><%= button_to "More Recipes", recipes_path, :method => :get %></button>
+</div> 
+
+</center>

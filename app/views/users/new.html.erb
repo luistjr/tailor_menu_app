@@ -1,3 +1,4 @@
+<center>
 <h1 class="title">Create Your Account</h1>
 
 <% if flash[:my_errors] %>
@@ -9,8 +10,7 @@
 </ul>
 <% end %>
 
-  <%= form_for @user do |f| %>
-
+<%= form_for @user do |f| %>
       <%= f.label :username  %> 
       <%= f.text_field :username  %>
 <br>
@@ -21,13 +21,11 @@
       <%= f.password_field :password  %>
 <br>
 <br>
-
 <div class="control">
-  <button class="button is-primary"><%= f.submit %></button>
-</div>
-    
-    
-  <% end %>
+  <button class="button is-success is-rounded"><%= f.submit class: "form-btn" %></button>
+</div> 
+<% end %>
+</center>
 
 
 
